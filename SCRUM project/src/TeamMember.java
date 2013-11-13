@@ -6,6 +6,11 @@ public class TeamMember {
 	
 	
 	
+	public TeamMember(String name, String role) {
+		// TODO Auto-generated constructor stub
+		this.memberName=name;
+		this.memberRole=role;
+	}
 	public String getMemberName() {
 		return memberName;
 	}
