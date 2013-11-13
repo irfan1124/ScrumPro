@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,12 +9,25 @@ import org.junit.Test;
 public class ScrumTest {
 
 	Task task;
-	Story story;
+	Story story,story2;
+	Sprint sprint1;
+	ArrayList<Story> Sprintstory;
+	Team team;
+	TeamMember teamMem1;
+	
 	@Before
 	public void setUp() throws Exception {
 		
 		task=new Task(2);
 		story=new Story(6,5);
+		story2=new Story(6,5);
+		//Sprintstory.add(story2);
+		//sprint1 = new Sprint(Sprintstory);
+		
+		//sprint1.getStory().add(story2);
+		//Sprintstory.add(story);
+		//System.out.print(Sprintstory.get(0));
+		//sprint1 = new Sprint(Sprintstory);
 	}
 
 	@Test
@@ -27,7 +42,23 @@ public class ScrumTest {
 	public void testStory() {
 		
 		assertEquals(6, story.getPriorityNum());
-		assertEquals(5, story.getStoryPoint());
+	//	assertEquals(5, story.getStoryPoint());
+		//assertEquals(4,story.getPriorityNum());
+	}
+	
+	@Test
+	public void testSprint() {
+		
+		assertEquals(6, sprint1.getStory().set(0, story));
+		//assertEquals(5, story.getStoryPoint());
+		//assertEquals(4,story.getPriorityNum());
+	}
+	
+	@Test
+	public void testTeamMember() {
+		
+		assertEquals(6, sprint1.getStory().set(0, story));
+		//assertEquals(5, story.getStoryPoint());
 		//assertEquals(4,story.getPriorityNum());
 	}
 
