@@ -3,7 +3,7 @@ public class TeamMember {
 
 	private String memberName;
 	private String memberRole;
-	
+	private Task task;
 	
 	
 	public TeamMember(String name, String role) {
@@ -22,5 +22,16 @@ public class TeamMember {
 	}
 	public void setMemberRole(String memberRole) {
 		this.memberRole = memberRole;
+	}
+	
+	public void allocatetask(Task task)
+	{
+		this.task=task;
+	}
+	public Task getTask() {
+		return task;
+	}
+	public void setTask(Task task) {
+		this.task = task;
 	}
 }
